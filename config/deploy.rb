@@ -3,7 +3,7 @@ set :scm, :git
 set :deploy_via, :remote_cache
 set :git_enable_submodules, 1
 set :repository, "git@github.com:jkath/sbradford.git"
-set :domain,     "thebradfordteam.com"
+set :domain,     "shawnbradfordteam.com"
 
 set :user,     'deploy'
 set :use_sudo, false
@@ -21,9 +21,9 @@ end
 task :production do
   set :deploy_to,  "/var/www/html/rails/#{application}"
   set :password, 'd3pl0y'
-  role :app, "190.120.226.226"
-  role :web, "190.120.226.226"
-  role :db,  "190.120.226.226", :primary => true
+  role :app, "74.208.205.135"
+  role :web, "74.208.205.135"
+  role :db,  "74.208.205.135", :primary => true
 end
 
 # external requirements:
