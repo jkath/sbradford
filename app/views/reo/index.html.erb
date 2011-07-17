@@ -1,0 +1,52 @@
+<br>
+<div id="pagecontent">
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+		<p class="notopgap">&nbsp;</p>
+		<!-- Start Of Content -->
+		<a id="resourceslink" href="javascript:toggleDiv('imgresources', 'reoresources', '/images/buttons/documentandlinkresources.png', '/images/buttons/hideresources.png');"><img id="imgresources" src="/images/buttons/documentandlinkresources.png" border="0" height="40"/></a><br>
+			<div id="reoresources"  style="display:none">
+				<table cellspacing="2" width="80%">
+					<tr>
+						<th class="tdheader">
+							Links
+						</th>
+						<th class="tdheader">
+							Documents
+						</th>
+					</tr>
+					<tr>
+						<td width="50%" class="row1bg" valign="top">
+						<% 
+							links = Sitelink.find_by_pageid('REO')
+							links.each do |link|
+						%>
+							<%= generate_hreftag(link.url, link.title, link.is_popup) %><%=h link.title %></a><br>
+						<%	
+							end
+						%>
+						</td>
+						<td width="50%" class="row2bg" valign="top">
+							<% 
+								docs = Document.find_by_pageid('REO')
+								docs.each do |document|
+							%>
+								<a href="/system/documents/<%= document.id.to_s %>/<%= document.document_file_name %>"/>
+									<%=h truncate_words(document.title, 5) %></a><br>
+							<%	
+								end
+							%>
+						</td>
+				    </tr>
+				</table>
+			</div>
+			
+			<%= get_site_text("REOPAGE") %>
+
+		<!-- End Of Content -->
+		<br>
+		<p class="nobottomgap"></p>
+	</div>
+<div class="bottom-left"></div><div class="bottom-right"></div>
+</div> <!-- End Page Content -->
+

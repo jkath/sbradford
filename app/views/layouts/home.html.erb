@@ -1,0 +1,164 @@
+<html>
+<head>
+<title><%= get_site_text("HOMEPAGETITLE") %></title>
+<meta name="descripton" content="<%= get_site_text("HOMEPAGEMETADESCRIPTION") %>">
+<meta name="keywords" content="<%= get_site_text("HOMEPAGEMETAKEYWORDS") %>"/>
+
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=windows-1251">
+		<link href="template/style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="/javascripts/realestate.js"></script>
+
+</head>
+<body>
+	<center>
+<div id="centering-div">
+	
+	<div id="homepageleftside">
+		<div id="homepageleftboxmenu">
+			&nbsp;<%= render(:partial => "shared/othermenu", :locals => {:pagename => "HOME"}) %>
+		</div>
+		<div id="homepageleftbox1">
+			<br>
+				<center>
+				<IMG SRC="/images/shawnsolo.jpg" width="150" ALT=""><br>
+				</center>
+		</div>
+		
+		<div id="homepageleftbox2">
+			<div id="homepageleftsectionbar">
+				Our Featured Properties
+			</div>
+			<div id="container">			
+				<center>		
+				<script type="text/javascript" src="/imagerotator/swfobject.js"></script>
+				<script type="text/javascript">
+					window.onload = function loadphotoplayer() {
+						var s1 = new SWFObject("/imagerotator/imagerotator.swf","rotator","310","300","7");
+						s1.addParam("allowfullscreen","true");
+						s1.addVariable("file","http://<%= request.host_with_port %>/homepageflashplayer");
+						s1.addVariable("width","310");
+						s1.addVariable("height","300");
+						s1.write("container");
+					}
+				</script>
+				</center>
+			</div>
+		</div>
+
+
+		<div id="homepageleftbox3">
+			<br><br><br>
+			<center>
+			<a href="javascript:doWindowPopup('http://azreoagent.wordpress.com');">
+			<img border="0" width="220" src="/images/blogup.png" onmouseover="this.src='/images/blogover.png';" onmouseout="this.src='/images/blogup.png';" />	
+			</a>
+			</center>
+		</div>
+		
+	</div>
+	
+	<div id="homepagecenter">		
+	</div>
+	
+	<div id="homepagerightside">
+
+		<div id="homepagebuttons">
+			<a href="/reo"><img src="/images/buttons/reobpo.png" height="40" border="0"></a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="/shortsales"><img src="/images/buttons/shortsales.png" height="40" border="0"></a>
+		</div>
+		<div id="homepagerightbox1">
+			<IMG SRC="template/images/homepagehouse.jpg" WIDTH=516 HEIGHT=262 ALT="">
+		</div>
+		
+		<div id="homepagerightbox2">
+			&nbsp;<%= render(:partial => "shared/usermenu", :locals => {:pagename => 'HOME'}) %>
+			<a href="/showarticles">Articles</a>
+			| <a href="/showlinks">Links</a>
+			| <a href="/contactus">Contact Us</a> | <a href="/aboutus">About Us</a>
+			<% if current_user %>
+				| <a href="/logout">Logout</a>
+			<% else %>
+				| <a href="/login">Login</a>
+			<% end %>
+		</div>
+		
+		<div  id="homepagerightbox3" >
+			<br>
+			<center><span id="welcometitle">Welcome To Buy And Sell Smart Realty</span></center><br>
+					<img src="/images/basslogosmall.jpg" width="219" height="105" align="right">
+
+					<br>
+					<span id="welcometext"><%= get_site_text("HOMEPAGEABOUTUS") %></span>
+					<br><br>
+					<center>
+						<a href="/aboutus"><IMG SRC="/images/buttons/aboutus.png" height="36" border="0"></a>
+						<a href="/contactus"><IMG SRC="/images/buttons/contactus.png" height="36" border="0"></a>
+						<a href="/buyerinfo"><IMG SRC="/images/buttons/buyerinfo.png" height="36" border="0"></a>
+						<a href="/sellerinfo"><IMG SRC="/images/buttons/sellerinfo.png" height="36" border="0"></a>
+					</center>		
+		</div>		
+		
+		<div id="homepagerightbox4">
+					<br>
+					<div id="homepagesearch"><!-- Start of search -->
+				
+							<%
+								@searchcriteria = session[:searchcriteria]
+								if @searchcriteria == nil
+									@searchcriteria = Searchcriteria.new(nil)
+									session[:searchcriteria] = @searchcriteria
+								end
+							%>
+
+						</div> <!-- End of search -->									
+	
+						<div id="homepagerightsectionbar">
+							Member Area Login
+						</div>
+						<div id="memberloginarea">
+							<br>
+							<% if !current_user %>
+							<div id="homepagelogin">
+								<% form_tag session_path do -%>
+								<%= label_tag 'login' %>: <%= text_field_tag 'login', @login %> <%= label_tag 'password' %>: <%= password_field_tag 'password', nil %> <%= submit_tag 'Log in' %>
+								<% end -%>
+								<a class="homepageregister" href="/signup">Click Here To Register</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/forgotpassword">Forgot Your Password? Click Here</a>	
+							 </div>
+							<% else %>
+								<div id="homepagewelcomeuser">
+									Welcome <%= current_user.firstname %>
+								</div>
+							<% end %>
+						</div>
+		</div>
+		
+	</div>
+	
+	
+	<div id="homepagefooter">
+		<table bgcolor="#990000" width="100%" border="0" cellspacing="10" cellpadding="0">
+		  <tr>
+		    <td class="white">Copyright © 2008 Buy and Sell Smart Realty And <a href="javascript:doWindowPopup('http://www.jameskathconsulting.com')">James Kath Consulting, LLC.</a><br>
+		      All Rights Reserved.</td>
+		    <td align="right" class="white"><a href="/tandc">Terms &amp; Conditions</a> | <a href="/privacy">Privacy Policy</a></td>
+		  </tr>
+		</table>
+	</div>
+
+</div>
+<a href="/publistinglist"></a>
+</center>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9453236-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>

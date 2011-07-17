@@ -1,0 +1,35 @@
+						 <% form_for @searchcriteria, :url => { :controller => "listings",
+							 				:action => "listingssearch" } do |f| %>
+							<table>
+								<tr>
+									<td>City:</td>
+									<td><%= f.text_field(:city, :size => "35") %></td>
+									<td>State:</td>
+									<td>
+<%= collection_select(:searchcriteria, :statecode,  @usstates,  :statecode, :statename, {:prompt   => "Select State"}) %>
+									</td>
+								</tr>
+								<tr>
+									<td>Zip:</td>
+									<td><%= f.text_field(:zip, :size => "8") %></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Price From:</td>
+									<td colspan="3">
+								<%= collection_select(:searchcriteria, :pricefrom,  @pricelistfrom,  :pricevalue_str, :pricelabel) %>
+									&nbsp; Price To:
+									<%= collection_select(:searchcriteria, :priceto,  @pricelistto,  :pricevalue_str, :pricelabel) %>
+									</td>
+								</tr>
+								<tr>					
+									<td>Keywords:</td>								
+									<td colspan="3">
+										<%= f.text_field(:srchtoken, :size => "45") %>
+										&nbsp;&nbsp;
+										<%= submit_tag 'Search' %>
+									</td>
+								</tr>
+							</table>
+						<% end %>

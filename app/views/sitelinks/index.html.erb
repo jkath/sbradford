@@ -1,0 +1,48 @@
+<h1>Site Links</h1>
+<div id="pagecontent">
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+		<p class="notopgap">&nbsp;</p>
+		<!-- Start Of Content -->
+		<table width="90%">
+		  <tr>
+		    <th>Title</th>
+		    <th>Url</th>
+			<th>Page</th>
+		    <th>Photo</th>
+
+		  </tr>
+		<% x = 2 %>
+		<% @sitelinks.each do |sitelink| %>
+		<% newsclass = "row1bg"
+		   newsclass = "row2bg" if x % 2 == 0
+		   x += 1
+		%>
+		 <tr class="<%= newsclass %>">
+		    <td valign="top"><%= generate_hreftag(sitelink.url, sitelink.title, sitelink.is_popup) %><%=h sitelink.title %></a></td>
+		    <td valign="top"><%= generate_hreftag(sitelink.url, sitelink.title, sitelink.is_popup) %><%=h sitelink.url %></a></td>
+			<td valign="top"><%= sitelink.preferredpage %></td>
+			<td valign="top">
+				<%if sitelink.photo_file_name %>
+				    <%= generate_hreftag(sitelink.url, sitelink.title, sitelink.is_popup) %><%= image_tag sitelink.photo.url(:thumb) %></a>
+				<% else %>
+					No Image Available
+				<% end %>
+			</td>
+		    <td valign="top"><%= link_to 'Edit', edit_sitelink_path(sitelink) %></td>
+		    <td valign="top"><%= link_to 'Delete', sitelink, :confirm => 'Are you sure?', :method => :delete %></td>
+		  </tr>
+		<% end %>
+		</table>
+
+		<br />
+
+		<%= link_to 'New Site Link', new_sitelink_path %>
+	<br>
+	<!-- End Of Content -->
+	<br>
+	<p class="nobottomgap"></p>
+</div>
+<div class="bottom-left"></div><div class="bottom-right"></div>
+</div> <!-- End Page Content -->
+		

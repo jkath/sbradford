@@ -1,0 +1,63 @@
+<h1>Your Documents</h1>
+<br>
+<div id="pagecontent">
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+		<p class="notopgap">&nbsp;</p>
+		<!-- Start Of Content -->
+  	<!-- Your content goes here -->
+	<% if @documents.size == 0%>
+		No Documents Saved Yet
+		<br>
+	<% else %>
+		<table width="100%">
+		  <tr>
+		    <th>Title</th>
+		    <th>Popup</th>
+		    <th>Description</th>
+			<th>Page</th>
+		    <th>File Name</th>
+		    <th> </th>
+		    <th>Generated URL</th>
+		  </tr>
+
+		<% x = 2 %>
+		<% @documents.each do |document| %>
+		<% newsclass = "row1bg"
+		   newsclass = "row2bg" if x % 2 == 0
+		   x += 1
+		%>
+		 <tr class="<%= newsclass %>">
+		    <td><%=h truncate_words(document.title, 5) %></td>
+		    <td><%=h document.as_popup %></td>
+		    <td><%= truncate_words(document.description, 5) %></td>
+			<td><%= document.preferredpage %></td>
+		    <td><%=h document.document_file_name %></td>
+		    <td>
+				<a href="/system/documents/<%= document.id.to_s %>/<%= document.document_file_name %>"/>
+					View Document
+				  </a>			
+			</td>
+		    <td>
+				<%= "http://" + request.host_with_port + "/system/documents/" + document.id.to_s + "/" + document.document_file_name %>
+			</td>
+		<% if current_user && current_user.is_admin %>
+		    <td><%= link_to 'Edit', edit_document_path(document) %></td>
+		    <td><%= link_to 'Delete', document, :confirm => 'Are you sure?', :method => :delete %></td>
+		<% end %>
+		  </tr>
+		<% end %>
+		</table>
+	<% end %>
+		<br />
+
+		<%= link_to 'New document', new_document_path %>
+		<br />
+		<br />
+		
+	<!-- End Of Content -->
+	<br>
+	<p class="nobottomgap"></p>
+</div>
+<div class="bottom-left"></div><div class="bottom-right"></div>
+</div> <!-- End Page Content -->

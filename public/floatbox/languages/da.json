@@ -1,0 +1,13 @@
+// Danish
+{
+"hintClose":   "Luk (tast: Esc)",
+"hintPrev":    "Forrige (tast: ←)",
+"hintNext":    "Næste (tast: →)",
+"hintPlay":    "Afspil (tast: mellemrum)",
+"hintPause":   "Pause (tast: mellemrum)",
+"hintResize":  "Tilpas (tast: Tab)",
+"imgCount":    "Billede %1 af %2",
+"nonImgCount": "Side %1 af %2",
+"mixedCount":  "(%1 af %2)",
+"infoText":    "Info..."
+}

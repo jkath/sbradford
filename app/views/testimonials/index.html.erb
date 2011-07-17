@@ -1,0 +1,43 @@
+<h1>Testimonials</h1>
+
+<div id="pagecontent">
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+		<p class="notopgap">&nbsp;</p>
+		<!-- Start Of Content -->
+		<table width="90%">
+		  <tr>
+		    <th>Title</th>
+		    <th>Name</th>
+		    <th>Testimonial</th>
+		  </tr>
+
+		<% x = 2 %>
+		<% @testimonials.each do |testimonial| %>
+		<% newsclass = "row1bg"
+		   newsclass = "row2bg" if x % 2 == 0
+		   x += 1
+		%>
+		 <tr class="<%= newsclass %>">
+		    <td><%=h truncate_words(testimonial.title, 5) %></td>
+		    <td><%=h testimonial.fullname %></td>
+		    <td><%= truncate_words(testimonial.testimonial, 10) %></td>
+
+		    <td><%= link_to 'View', testimonial %></td>
+		    <td><%= link_to 'Edit', edit_testimonial_path(testimonial) %></td>
+		    <td><%= link_to 'Delete', testimonial, :confirm => 'Are you sure?', :method => :delete %></td>
+		  </tr>
+		<% end %>
+		</table>
+
+		<br />
+
+		<%= link_to 'Add A New Testimonial', new_testimonial_path %>
+		<br>
+		<br>
+	<!-- End Of Content -->
+	<br>
+	<p class="nobottomgap"></p>
+</div>
+<div class="bottom-left"></div><div class="bottom-right"></div>
+</div> <!-- End Page Content -->

@@ -1,0 +1,51 @@
+<h1>Your Latest News</h1>
+
+<div id="pagecontent">
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+		<p class="notopgap">&nbsp;</p>
+		<!-- Start Of Content -->
+	<% if @latestinfos.size == 0%>
+		No News Saved Yet
+		<br>
+	<% else %>
+		<table width="100%">
+		 <tr>
+		   <th>Title</th>
+		   <th align="left">Link</th>
+		   <th>Popup?</th>
+		   <th>Active?</th>
+		   <th>Description</th>
+		 </tr>
+
+		<% x = 2 %>
+		<% @latestinfos.each do |latestinfo| %>
+		<% newsclass = "row1bg"
+		   newsclass = "row2bg" if x % 2 == 0
+		   x += 1
+		%>
+		 <tr class="<%= newsclass %>">
+		   <td><%=h latestinfo.title %></td>
+		   <td><%=h latestinfo.link %></td>
+		   <td><%=h latestinfo.as_aspopup %></td>
+		   <td><%=h latestinfo.is_active %></td>
+		   <td><%= latestinfo.description %></td>
+		   <td><%= link_to 'View', latestinfo %>&nbsp;</td>
+		   <td><%= link_to 'Edit', edit_latestinfo_path(latestinfo) %>&nbsp;</td>
+		   <td><%= link_to 'Delete', latestinfo, :confirm => 'Are you sure?', :method => :delete %>&nbsp;</td>
+		 </tr>
+		<% end %>
+		</table>
+	<% end %>
+		<br />
+
+		<%= link_to 'Add New News', new_latestinfo_path %>
+		<br />
+		<br />
+		
+	<!-- End Of Content -->
+	<br>
+	<p class="nobottomgap"></p>
+</div>
+<div class="bottom-left"></div><div class="bottom-right"></div>
+</div> <!-- End Page Content -->

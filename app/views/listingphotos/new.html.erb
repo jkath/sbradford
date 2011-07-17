@@ -1,0 +1,56 @@
+<h1>Listing Photos</h1>
+
+<br />
+<div id="pagecontent">
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+		<p class="notopgap">&nbsp;</p>
+		<!-- Start Of Content -->
+  	<!-- Your content goes here -->
+
+	<%= error_messages_for :listingphoto %>
+  	<!-- Your content goes here -->
+	    <% form_for @listingphoto, :html => { :multipart => true } do |f| %>
+
+		  <%= f.hidden_field :listing_id, :value => @listing.id %>
+		
+		  <p>
+		    Title<br />
+		    <%= f.text_field :description, :size => 30  %>
+		  </p>
+		  <p>
+		    <%= f.label :photo %><br />
+		    <%= f.file_field :photo %>
+		  </p>
+		  <p>
+		    <%= f.submit 'Upload Photo' %>
+		  </p>
+		
+		<% end %>
+
+
+		<br>
+
+		<table>
+
+		  <tr>
+
+		<% @listingphotos.each do |photo| %>
+		    <td valign="top"></td>
+		    <td id="whitetext" valign="top" align="center">
+				<a href="/deletephoto?id=<%= photo.id %>&listingid=<%= photo.listing_id %>">Delete This Photo</a><br>
+				<%= image_tag photo.photo.url(:thumb), :height => "90" %><br>
+				<%=h truncate_words(photo.description, 4) %>
+			</td>
+		<% end %>
+		</tr>
+		</table>
+		<br>
+			<a href="/showmylistings">Go Back To Features Listings List</a>
+	<!-- End Of Content -->
+	<br>
+	<p class="nobottomgap"></p>
+</div>
+<div class="bottom-left"></div><div class="bottom-right"></div>
+</div> <!-- End Page Content -->
+<br>

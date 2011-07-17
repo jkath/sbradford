@@ -1,0 +1,36 @@
+<div id="pagecontent">
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+		<p class="notopgap">&nbsp;</p>
+		<!-- Start Of Content -->
+		<p>
+		  <b>Title:</b>
+		  <%=h @sitelink.title %>
+		</p>
+
+		<p>
+		  <b>Url:</b>
+		  <%=h @sitelink.url %>
+		</p>
+
+		<p>
+		  <b>Image:</b>
+		  	<%if @sitelink.photo_file_name %>
+			    <%= generate_hreftag(@sitelink.url, @sitelink.title, @sitelink.is_popup) %><%= image_tag @sitelink.photo.url(:medium) %></a>
+			<% else %>
+				No Image Available
+			<% end %>
+		</p>
+
+<br>
+<br>
+		<%= link_to 'Edit', edit_sitelink_path(@sitelink) %> |
+		<%= link_to 'Back To Site Links List', sitelinks_path %>
+
+	<br>
+	<!-- End Of Content -->
+	<br>
+	<p class="nobottomgap"></p>
+</div>
+<div class="bottom-left"></div><div class="bottom-right"></div>
+</div> <!-- End Page Content -->

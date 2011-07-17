@@ -1,0 +1,22 @@
+login: &login
+  adapter: mysql
+  host: localhost
+  encoding: utf8
+
+development:
+  database: sbradford_dev
+  username: root
+  password: maritza
+  <<: *login
+
+test:
+  database: sbradford_test
+  username: sbradford
+  password: sbradford
+  <<: *login
+
+production:
+  database: sbradford_prod
+  username: root
+  password: maritza
+  <<: *login

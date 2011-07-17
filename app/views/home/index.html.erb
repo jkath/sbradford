@@ -1,0 +1,59 @@
+<head>
+		<script type="text/javascript" src="/imagerotator/swfobject.js"></script>
+		
+		<script src="/javascripts/flowplayer.min.js"></script>
+	<script>
+	/*
+	    This time we install flowplayer as before but we supply a
+	    configuration object as the last "argument" to flowplayer
+	*/
+	flowplayer("player", "/flash/flowplayer-3.0.2.swf", {
+
+	    // this here is the configuration object
+	    clip: {
+	        url: '',
+	        autoPlay: true,
+
+
+	        // you can even have JavaScript functions in the configuration
+	        // here you send notification to Google Analytics when playback starts
+	        onStart: function(clip) {
+	            pageTracker._trackPageview("configuration demo: " + clip.url);
+	        }
+	    }
+	});
+	</script>    
+</head>
+
+<div id="homepageupperleft">
+	<div id="myinfo">
+	NFSTI Properties is ranked among the top 15 Realtors in the entire world. The 2007 statistics have confirmed our place amid thousands of other professionals in this industry.  As we approached the final quarter of 2008, we were still one of the leaders in worldwide real estate.   As 2009 continues we are selling many homes to buyers; our listings are doing very well as the market is improving.  We have achieved the honored "Realtors Of The World Hall of Fame" status this year which is a highly distinguished award for professional achievement in real estate sales.
+	</div>
+	<div id="mypic">
+		<img src="/images/MeInfrontOfComp.JPG" width="250">
+	</div>
+</div>
+
+<div id="container" class="photocontainer">
+<script type="text/javascript">
+	var s1 = new SWFObject("/imagerotator/imagerotator.swf","rotator","300","300","7");
+	s1.addParam("allowfullscreen","true");
+	s1.addVariable("file","http://<%= request.host_with_port %>/homepageflashplayer?dt=<%= Time.now %>");
+	s1.addVariable("width","300");
+	s1.addVariable("height","300");
+	s1.write("container");
+</script>
+</div>
+<br><br><br>
+
+<div id="videocontainer">
+<a href="http://<%= request.host_with_port %>/system/videos/arctcat.flv %>" id="player" style="display:block;width:500px;height:375px"></a>
+</div>
+
+<div id="homepagebottomleft">
+	<br><br><br>
+	<img src="/images/nfstiedu.jpg">
+</div>
+
+<div id="homepagebottomright">
+</div>

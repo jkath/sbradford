@@ -1,0 +1,2 @@
+class ShortsalesController < ApplicationController
+end

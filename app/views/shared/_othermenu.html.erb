@@ -1,0 +1,11 @@
+<a href="/pubdocuments">Documents</a> | 
+<a href="/pubtestimonials">Testimonials</a> | 
+<% if pagename && pagename == "HOME" %>
+	<%= link_to "Search All Properties", :controller => 'listings', :action => 'listbook' %>
+	| <a href="/mlssearch">MLS Search</a>
+<% end %>
+<% if pagename && pagename != "HOME" %>
+ <a href="/showarticles">Articles</a>
+| <a href="/showlinks">Links</a>
+<% end %>
+

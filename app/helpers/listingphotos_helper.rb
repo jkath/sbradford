@@ -1,0 +1,2 @@
+module ListingphotosHelper
+end

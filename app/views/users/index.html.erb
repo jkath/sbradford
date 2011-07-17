@@ -1,0 +1,48 @@
+<h1>Registered Users</h1>
+
+<div id="pagecontent">
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+		<p class="notopgap">&nbsp;</p>
+		<!-- Start Of Content -->
+		<table width="100%">
+		  <tr>
+		    <th>Registered</th>
+		    <th>First</th>
+		    <th>Last</th>
+		    <th>Login</th>
+		    <th>Admin</th>
+		    <th>Phone</th>
+		  </tr>
+
+		<% x = 2 %>
+		<% @users.each do |user| %>
+		<% newsclass = "row1bg"
+		   newsclass = "row2bg" if x % 2 == 0
+		   x += 1
+		%>
+		 <tr class="<%= newsclass %>">
+		    <td><%= show_date(user.created_at) %></td>
+		    <td><%=h user.firstname %></td>
+		    <td><%=h user.lastname %></td>
+		    <td><%= user.login %></td>
+		    <td><%= user.is_admin %></td>
+		    <td><%= user.phone %></td>
+
+		    <td><a href="/userprofile?id=<%= user.id %>">View</a></td>
+		    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+		    <td><%= link_to 'Delete', user, :confirm => 'Are you sure?', :method => :delete %></td>
+		  </tr>
+		<% end %>
+		</table>
+
+		<br />
+
+		<br>
+		<br>
+	<!-- End Of Content -->
+	<br>
+	<p class="nobottomgap"></p>
+</div>
+<div class="bottom-left"></div><div class="bottom-right"></div>
+</div> <!-- End Page Content -->

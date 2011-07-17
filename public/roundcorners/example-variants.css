@@ -1,0 +1,48 @@
+/* dialog variants - not needed for first blue (non-drip) style */
+
+.dialog.type2 .content,
+.dialog.type2 .t,
+.dialog.type2 .b,
+.dialog.type2 .b div {
+ background-image:url(dialog2-dark-800x1200-alpha-drip.png);
+ _background-image:url(dialog2-dark-alpha-drip.gif);
+}
+
+/* "drip" variant */
+
+.dialog.drip .b,
+.dialog.drip .b div {
+ height:75px;
+}
+
+.dialog.drip {
+ margin-left:65px;
+}
+
+.dialog.drip .t,
+.dialog.drip .b div,
+.dialog.drip .hd,
+.dialog.drip .bd,
+.dialog.drip .ft,
+.dialog.drip .wrapper {
+ margin-left:-65px;
+ width:65px;
+}
+
+.dialog.drip .wrapper {
+ width:auto;
+}
+
+.dialog .wrapper .hd,
+.dialog .wrapper .bd,
+.dialog .wrapper .ft {
+ margin-left:0px;
+}
+
+.dialog.drip .hd,
+.dialog.drip .bd,
+.dialog.drip .ft {
+ zoom:1;
+ width:auto;
+ padding:0px 2px 0px 12px;
+}

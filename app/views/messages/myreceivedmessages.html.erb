@@ -1,0 +1,46 @@
+<h1>Messages I Have Received</h1>
+<a href="mysentmessages">&nbsp;Go To Sent Messages</a>
+<br><br>
+
+<div id="pagecontent">
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+			<!-- Start Of Content -->
+			
+		<table width="100%">
+		  <tr>
+		    <th align="left">Date Received</th>
+		    <th align="left">Sender</th>
+		    <th align="left">Subject</th>
+		    <th align="left">Message</th>
+		    <th align="center">Read?</th>
+		  </tr>
+
+		<% @messages.each do |message| %>
+		  <%
+			sender = User.find(message.user_id)
+			sender_name = sender.firstname + " " + sender.lastname
+			hasbeenread = "Not Yet"
+		   	if message.hasbeenread 
+		 		hasbeenread = "Yes"
+			end
+		  %>
+		  <tr>
+			<td align="left"><%= show_date(message.created_at) %></td>
+			<td align="left"><%=h sender_name %></td>
+		    <td align="left"><%=h truncate_words(message.subject, 10) %></td>
+		    <td align="left"><%=h truncate_words(message.message, 10) %></td>
+		    <td align="center"><%=h hasbeenread %></td>
+		    <td align="right" id="reglink"><%= link_to 'View Message', message %></td>
+		  </tr>
+		<% end %>
+		</table>
+
+		<!-- End Of Content -->
+		<br>
+		<p class="notopgap"> </p>
+		<p class="nobottomgap"> </p>
+	</div>
+<div class="bottom-left"></div><div class="bottom-right"></div>
+</div> <!-- End Page Content -->
+		

@@ -1,0 +1,137 @@
+/* Demo styles, page-specific - not needed for your use. */
+
+html {
+ background:#222;
+ height:100%;
+}
+
+body {
+ background:transparent url(demo/bg-random.gif);
+ font:normal 76% verdana,tahoma,arial;
+}
+
+a {
+ color:#99ffff;
+}
+
+a:hover {
+ color:#ffff00;
+}
+
+h1, h2 {
+ font:normal 1em georgia,helvetica,arial;
+ letter-spacing:-0.5px; /* it isn't web 2.0 otherwise, right? ;) */
+}
+
+h2 {
+ font-size:1.25em;
+ letter-spacing:0px;
+ font-style:italic;
+}
+
+h2.compact {
+ margin-top:0.05em;
+ margin-bottom:1em;
+}
+
+h2.tight {
+ margin-bottom:0.5em;
+}
+
+h2 em {
+ text-decoration:underline;
+}
+
+ul {
+ margin:0.5em 0px 0px 1.5em;
+ padding:0px;
+}
+
+ul li {
+ line-height:1.9em;
+}
+
+p {
+ margin:0.5em 0px 1.25em 0px;
+ padding:0px;
+ line-height:1.7em;
+}
+
+p.last {
+ margin-bottom:0px;
+}
+
+p.compact {
+ margin:0px;
+ padding:0px;
+}
+
+pre {
+ border:1px solid #cc3333;
+ width:99%;
+ overflow:auto;
+ max-height:39.4em;
+}
+
+pre span {
+ display:block;
+ border:1px solid #cc3333;
+ border-left:none;
+ border-right:none;
+ margin-top:1em;
+ padding:0.5em 0px 0.5em 0px;
+ color:#ff9999;
+}
+
+p, ul {
+ font-size:0.9em;
+}
+
+/* demo layout (columns, etc.) - only for this demo page */
+
+#demo {
+ position:relative;
+ margin:0px auto;
+ _width:100%; /* IE 6 sucks. */
+ max-width:1600px;
+}
+
+.col {
+ float:left;
+ display:inline;
+ width:49%;
+ _width:48%;
+ margin:0px 0.5% 0px 0.5%;
+}
+
+.col.last {
+ margin-right:0px;
+}
+
+/* content-specific */
+
+.dialog .content {
+ padding:0.5em 1em 0.5em 0px;
+}
+
+.dialog .wrapper {
+ min-height:155px; /* minimum content height, so bottom shade fills in nicely - can ignore if no gradient in dialog, etc. */
+}
+
+.dialog h1 {
+ /* header */
+ font-size:2em;
+ margin:0px;
+ padding:0px;
+ padding-top:0.25em;
+}
+
+html>body .dialog pre {
+ font-size:1.1em;
+ *font-size:0.9em;
+}
+
+code {
+ font-size:1.1em;
+ color:#ccffff;
+}

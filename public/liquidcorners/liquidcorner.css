@@ -1,0 +1,51 @@
+<!-- 
+/*
+	| liquidcorners.css; feel free to adapt the style!
+	| ================================================
+	| use: 4 corners with borderline outside a contentbox with class="inside"; 
+	|      image  = upper half: top left corner, long borderline, top right corner
+	|               under half: bottom left corner, long borderline, bottom right corner
+	|      CHANGE = you have to change this for fitting to your image
+	|      YCC    = You Can Change (or omit), if wanted
+	|      DNC    = Do Not Change
+	| credits: original by francky kleyneman, see article/tutorial in Francky's Developers Corner:
+	|          http://home.tiscali.nl/developerscorner/liquidcorners/liquidcorners.htm
+	| adapted
+	| by.....: ... (your name and site?!)
+	|
+	| + please let this text & links intact for a next user +
+*/
+.top-left, .top-right, .bottom-left, .bottom-right { 
+	background-image: url('images/redcorners1280x18.gif'); /* CHANGE: path and name of your image */
+	height: 9px;       /* CHANGE: replace by the height of one of your corners (= 1/2 height of the image) */
+	font-size: 2px;    /* DNC: correction IE for height of the <div>'s */
+	}
+.top-left, .bottom-left { 
+	margin-right: 9px; /* CHANGE: replace by the width of one of your corners */
+	}
+.top-right, .bottom-right { 
+	margin-left: 9px;  /* CHANGE: replace by the width of one of your corners */
+	margin-top: -9px;  /* CHANGE: replace by the height of one of your corners */
+	}
+.top-right {
+	background-position: 100% 0;    /* DNC: position right corner at right side, no vertical changes */
+	}
+.bottom-left  { 
+	background-position: 0 -9px;    /* CHANGE: replace second number by negative height of one of your corners */
+	}
+.bottom-right { 
+	background-position: 100% -9px; /* CHANGE: replace second number by negative height of one of your corners */
+	}
+
+.inside {
+	border-left: 1px solid #C00000; /* YCC: color & properties of the left-borderline */
+	border-right: 1px solid #C00000;/* YCC: color & properties of the right-borderline */
+	background: #990000	;             /* YCC: background-color of the inside */
+	color: #ffffff;                 /* YCC: default text-color of the inside */
+	padding-left: 10px;             /* YCC: all texts at some distance of the left border */
+	padding-right:10px;             /* YCC: all texts at some distance of the right border */
+	}
+	
+	
+.notopgap    { margin-top: 0; }    /* DNC: to avoid splitting of the box */
+.nobottomgap { margin-bottom: -1px; padding-bottom: 1px; } /* DNC: to avoid splitting of the box */

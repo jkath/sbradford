@@ -1,0 +1,87 @@
+/* dialog variants - alternate colours, widths and so on */
+
+.dialog.short .wrapper {
+ max-height:520px;
+}
+
+.dialog.type2 .content,
+.dialog.type2 .t,
+.dialog.type2 .b,
+.dialog.type2 .b div {
+ background-image:url(dialog2-dark-800x1200-alpha-drip.png);
+ _background-image:url(dialog2-dark-alpha-drip.gif);
+}
+
+.dialog.type2 .b,
+.dialog.type2 .b div {
+ height:40px; /* slightly higher due to bottom shade */
+}
+
+.dialog.type2 .content {
+ /* min-height:155px; */ /* compensate overall height for bottom shade */
+}
+
+/* "Mr. Clean" */
+
+.dialog.type3 .content,
+.dialog.type3 .t,
+.dialog.type3 .b,
+.dialog.type3 .b div {
+ background-image:url(dialog2-mrclean.png);
+ _background-image:url(dialog2-mrclean.gif);
+}
+
+.dialog.type4 .content,
+.dialog.type4 .t,
+.dialog.type4 .b,
+.dialog.type4 .b div {
+ background-image:url(dialog2-blue-800x1600-drip.png);
+ _background-image:url(dialog2-blue.gif);
+}
+
+.dialog.type5 .content,
+.dialog.type5 .t,
+.dialog.type5 .b,
+.dialog.type5 .b div {
+ background-image:url(dialog2-red-800x1200-drip.png);
+ _background-image:url(dialog2-red-drip.gif);
+}
+
+/* "drip" style extended class (eg. <div class="dialog type4 drip"> - more positioning due to width/height requirements */
+
+.dialog.drip .b,
+.dialog.drip .b div {
+ height:80px;
+}
+
+.dialog.drip {
+ margin-left:65px;
+}
+
+.dialog.drip .t,
+.dialog.drip .b div,
+.dialog.drip .hd,
+.dialog.drip .bd,
+.dialog.drip .ft,
+.dialog.drip .wrapper {
+ margin-left:-65px;
+ width:65px;
+}
+
+.dialog.drip .wrapper {
+ width:auto;
+}
+
+.dialog .wrapper .hd,
+.dialog .wrapper .bd,
+.dialog .wrapper .ft {
+ margin-left:0px;
+}
+
+.dialog.drip .hd,
+.dialog.drip .bd,
+.dialog.drip .ft {
+ zoom:1;
+ width:auto;
+ padding:0px 2px 0px 12px;
+}

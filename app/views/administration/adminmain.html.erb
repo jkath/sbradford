@@ -1,0 +1,91 @@
+<h1>Control Panel</h1>
+
+<div id="pagecontent">
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+		<p class="notopgap">
+			<!-- Start Of Content -->
+	<span class="listingtitle">
+		Here you can maintain the information that is important to your site.
+		<br>
+		<br>
+		<table width="100%">
+			<tr>
+				<td align="right" valign="top">Site Text:</td>
+				<td width="10">&nbsp;</td>
+		 		<td valign="top">Allows you to control text on some parts of your site.</td>
+			</tr>
+			<tr>
+				<td align="right" valign="top">Links:</td>
+				<td width="10">&nbsp;</td>
+		 		<td valign="top">Links to pages in your site or to other websites.</td>
+			</tr>
+			<tr>
+				<td align="right" valign="top">Documents:</td>
+				<td width="10">&nbsp;</td>
+		 		<td valign="top">Make documents available to visitors such as forms, pdf or Word documents or legal documents.</td>
+			</tr>
+			<tr>
+				<td align="right" valign="top">Latest News:</td>
+				<td width="10">&nbsp;</td>
+		 		<td valign="top">On the homepage, this is where you enter your latest news</td>
+			</tr>
+			<tr>
+				<td align="right" valign="top">Articles:</td>
+				<td width="10">&nbsp;</td>
+		 		<td valign="top">You can write interesting articles that will help your visitors</td>
+			</tr>
+			<tr>
+				<td align="right" valign="top">Testimonials:</td>
+				<td width="10">&nbsp;</td>
+		 		<td valign="top">Enter the great things your customers have to say about you!</td>
+			</tr>
+		</table>
+	</span>
+	<br>
+	<center>
+	<table width="70%">
+		<tr>
+			<td align="center" colspan="3">
+				<a href="/addlisting"><img src="/images/buttons/addanewfeaturedlisting.png" height='40' border="0"></a><br>
+				<a href="/showmylistings"><img src="/images/buttons/showallmyfeaturedlistings.png" height='40' border="0"></a>
+			</td>
+		</tr>
+		<tr>
+			<td align="center" colspan="3">
+				<%= link_to image_tag("/images/buttons/manageusers.png", :border => '0', :height => '40', :alt => "Users"), :controller => 'users', :action => 'index' %>
+				<%= link_to image_tag("/images/buttons/friendsofusers.png", :border => '0', :height => '40', :alt => "Users"), :controller => 'friendsofusers', :action => 'index' %>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<%= link_to image_tag("/images/buttons/sitetextbut.png", :border => '0', :height => '40', :alt => "Site Text"), :controller => 'sitetexts', :action => 'index' %>
+			</td>
+			<td align="center">
+				<%= link_to image_tag("/images/buttons/linksbut.png", :border => '0', :height => '40', :alt => "Site Links"), :controller => 'sitelinks', :action => 'index' %>
+			</td>
+			<td align="center">
+				<%= link_to image_tag("/images/buttons/documentsbut.png", :border => '0', :height => '40', :alt => "Documents"), :controller => 'documents', :action => 'index' %>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<%= link_to image_tag("/images/buttons/latestnewsbut.png", :border => '0', :height => '40', :alt => "News"), :controller => 'latestinfos', :action => 'index' %>
+			</td>
+			<td align="center">
+				<%= link_to image_tag("/images/buttons/articlesbut.png", :border => '0', :height => '40', :alt => "Articles"), :controller => 'articles', :action => 'index' %>
+			</td>
+			<td align="center">
+				<%= link_to image_tag("/images/buttons/testimonialsbut.png", :border => '0', :height => '40', :alt => "Testimonials"), :controller => 'testimonials', :action => 'index' %>
+			</td>
+		</tr>
+	</table>
+	</center>
+
+	<br>
+		<!-- End Of Content -->
+		</p>
+		<p class="nobottomgap"></p>
+	</div>
+<div class="bottom-left"></div><div class="bottom-right"></div>
+</div> <!-- End Page Content -->

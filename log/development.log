@@ -1,0 +1,105 @@
+# Logfile created on Sun Jul 17 08:57:41 -0600 2011  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mListing Columns (4.1ms)[0m   [0;1mSHOW FIELDS FROM `listings`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-07-17 08:57:54) [GET]
+  [4;35;1mUsstate Load (1.2ms)[0m   [0mSELECT * FROM `usstates` [0m
+  [4;36;1mPricelist Load (0.9ms)[0m   [0;1mSELECT * FROM `pricelists` ORDER BY pricevalue ASC[0m
+  [4;35;1mPricelist Load (0.5ms)[0m   [0mSELECT * FROM `pricelists` ORDER BY pricevalue DESC[0m
+Rendering template within layouts/home
+Rendering home/index
+  [4;36;1mSitetext Load (1.2ms)[0m   [0;1mSELECT * FROM `sitetexts` WHERE (textkey = 'HOMEPAGETITLE') LIMIT 1[0m
+  [4;35;1mSitetext Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `sitetexts`[0m
+  [4;36;1mSitetext Load (0.6ms)[0m   [0;1mSELECT * FROM `sitetexts` WHERE (textkey = 'HOMEPAGEMETADESCRIPTION') LIMIT 1[0m
+  [4;35;1mSitetext Load (0.4ms)[0m   [0mSELECT * FROM `sitetexts` WHERE (textkey = 'HOMEPAGEMETAKEYWORDS') LIMIT 1[0m
+Rendered shared/_othermenu (4.1ms)
+Rendered shared/_usermenu (42.5ms)
+  [4;36;1mSitetext Load (0.6ms)[0m   [0;1mSELECT * FROM `sitetexts` WHERE (textkey = 'HOMEPAGEABOUTUS') LIMIT 1[0m
+Completed in 148ms (View: 127, DB: 8) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mListing Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `listings`[0m
+
+
+Processing ListingphotosController#homepageflashplayer (for 127.0.0.1 at 2011-07-17 08:57:56) [GET]
+  Parameters: {"270"=>nil}
+  [4;36;1mListing Load (1.1ms)[0m   [0;1mSELECT * FROM `listings` [0m
+  [4;35;1mListingphoto Load (1.2ms)[0m   [0mSELECT * FROM `listingphotos` WHERE (`listingphotos`.listing_id = 19) [0m
+  [4;36;1mListingphoto Columns (3.5ms)[0m   [0;1mSHOW FIELDS FROM `listingphotos`[0m
+  [4;35;1mListingphoto Load (0.9ms)[0m   [0mSELECT * FROM `listingphotos` WHERE (`listingphotos`.listing_id = 21) [0m
+  [4;36;1mListingphoto Load (0.8ms)[0m   [0;1mSELECT * FROM `listingphotos` WHERE (`listingphotos`.listing_id = 22) [0m
+  [4;35;1mListingphoto Load (0.7ms)[0m   [0mSELECT * FROM `listingphotos` WHERE (`listingphotos`.listing_id = 23) [0m
+  [4;36;1mListingphoto Load (0.8ms)[0m   [0;1mSELECT * FROM `listingphotos` WHERE (`listingphotos`.listing_id = 24) [0m
+  [4;35;1mListingphoto Load (0.7ms)[0m   [0mSELECT * FROM `listingphotos` WHERE (`listingphotos`.listing_id = 25) [0m
+  [4;36;1mListingphoto Load (0.8ms)[0m   [0;1mSELECT * FROM `listingphotos` WHERE (`listingphotos`.listing_id = 26) [0m
+  [4;35;1mListingphoto Load (0.6ms)[0m   [0mSELECT * FROM `listingphotos` WHERE (`listingphotos`.listing_id = 28) [0m
+  [4;36;1mListingphoto Load (0.6ms)[0m   [0;1mSELECT * FROM `listingphotos` WHERE (`listingphotos`.listing_id = 29) [0m
+Rendering listingphotos/homepageflashplayer
+  [4;35;1mListing Load (0.7ms)[0m   [0mSELECT * FROM `listings` WHERE (`listings`.`id` = 19) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `listings` WHERE (`listings`.`id` = 19) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `listings` WHERE (`listings`.`id` = 19) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `listings` WHERE (`listings`.`id` = 19) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `listings` WHERE (`listings`.`id` = 19) [0m
+  [4;36;1mListing Load (0.6ms)[0m   [0;1mSELECT * FROM `listings` WHERE (`listings`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `listings` WHERE (`listings`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `listings` WHERE (`listings`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `listings` WHERE (`listings`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `listings` WHERE (`listings`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `listings` WHERE (`listings`.`id` = 21) [0m
+  [4;36;1mListing Load (0.5ms)[0m   [0;1mSELECT * FROM `listings` WHERE (`listings`.`id` = 22) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `listings` WHERE (`listings`.`id` = 22) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `listings` WHERE (`listings`.`id` = 22) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `listings` WHERE (`listings`.`id` = 22) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `listings` WHERE (`listings`.`id` = 22) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `listings` WHERE (`listings`.`id` = 22) [0m
+  [4;36;1mListing Load (0.8ms)[0m   [0;1mSELECT * FROM `listings` WHERE (`listings`.`id` = 23) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `listings` WHERE (`listings`.`id` = 23) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `listings` WHERE (`listings`.`id` = 23) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `listings` WHERE (`listings`.`id` = 23) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `listings` WHERE (`listings`.`id` = 23) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `listings` WHERE (`listings`.`id` = 23) [0m
+  [4;36;1mListing Load (0.7ms)[0m   [0;1mSELECT * FROM `listings` WHERE (`listings`.`id` = 24) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `listings` WHERE (`listings`.`id` = 24) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `listings` WHERE (`listings`.`id` = 24) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `listings` WHERE (`listings`.`id` = 24) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `listings` WHERE (`listings`.`id` = 24) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `listings` WHERE (`listings`.`id` = 24) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `listings` WHERE (`listings`.`id` = 24) [0m
+  [4;35;1mListing Load (0.6ms)[0m   [0mSELECT * FROM `listings` WHERE (`listings`.`id` = 25) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `listings` WHERE (`listings`.`id` = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `listings` WHERE (`listings`.`id` = 25) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `listings` WHERE (`listings`.`id` = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `listings` WHERE (`listings`.`id` = 25) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `listings` WHERE (`listings`.`id` = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `listings` WHERE (`listings`.`id` = 25) [0m
+  [4;36;1mListing Load (0.9ms)[0m   [0;1mSELECT * FROM `listings` WHERE (`listings`.`id` = 29) [0m
+Completed in 129ms (View: 77, DB: 20) | 200 OK [http://localhost/homepageflashplayer?270]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mListing Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `listings`[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-07-17 08:57:57) [GET]
+
+ActionController::RoutingError (No route matches "/system/listingphotos/114/medium.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mListing Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `listings`[0m
+
+
+Processing StaticpagesController#contactus (for 127.0.0.1 at 2011-07-17 08:58:00) [GET]
+Rendering template within layouts/application
+Rendering staticpages/contactus
+  [4;35;1mSitetext Load (0.7ms)[0m   [0mSELECT * FROM `sitetexts` WHERE (textkey = 'HOMEPAGEMETADESCRIPTION') LIMIT 1[0m
+  [4;36;1mSitetext Columns (8.9ms)[0m   [0;1mSHOW FIELDS FROM `sitetexts`[0m
+  [4;35;1mSitetext Load (2.1ms)[0m   [0mSELECT * FROM `sitetexts` WHERE (textkey = 'HOMEPAGEMETAKEYWORDS') LIMIT 1[0m
+  [4;36;1mSitetext Load (1.3ms)[0m   [0;1mSELECT * FROM `sitetexts` WHERE (textkey = 'OTHERPAGETITLE') LIMIT 1[0m
+Rendered shared/_usermenu (0.3ms)
+Rendered shared/_othermenu (0.1ms)
+Completed in 118ms (View: 97, DB: 17) | 200 OK [http://localhost/contactus]

@@ -1,0 +1,13 @@
+// Portuguese
+{
+"hintClose":   "Saída (chave: Esc)",
+"hintPrev":    "Precedente (chave: ←)",
+"hintNext":    "Seguida (chave: →)",
+"hintPlay":    "Começo (chave: espaçadora)",
+"hintPause":   "Pausa (chave: espaçadora)",
+"hintResize":  "Tamanho (chave: Tab)",
+"imgCount":    "Imagem %1 de %2",
+"nonImgCount": "Página %1 de %2",
+"mixedCount":  "(%1 de %2)",
+"infoText":    "Info..."
+}

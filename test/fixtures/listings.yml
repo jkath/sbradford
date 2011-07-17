@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  title: MyString
+  description: MyText
+  beds: 1
+  baths: 9.99
+  location: MyString
+  price: 9.99
+  taxes: 1
+  taxyear: MyString
+  otherinfo: MyText
+
+two:
+  user_id: 1
+  title: MyString
+  description: MyText
+  beds: 1
+  baths: 9.99
+  location: MyString
+  price: 9.99
+  taxes: 1
+  taxyear: MyString
+  otherinfo: MyText

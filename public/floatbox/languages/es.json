@@ -1,0 +1,13 @@
+// Spanish
+{
+"hintClose":   "Salida (teclado: Esc)",
+"hintPrev":    "Anterio (teclado: ←)",
+"hintNext":    "Después (teclado: →)",
+"hintPlay":    "Activar (teclado: barra espaciadora)",
+"hintPause":   "Pausa (teclado: barra espaciadora)",
+"hintResize":  "Tamaño (teclado: Tab)",
+"imgCount":    "Imagen %1 de %2",
+"nonImgCount": "Página %1 de %2",
+"mixedCount":  "(%1 de %2)",
+"infoText":    "Info..."
+}

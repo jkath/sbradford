@@ -1,0 +1,1 @@
+rake admin:crawl_pages URL=http://www.shawnbradfordteam.com SITEMAP=true

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="descripton" content="<%= get_site_text("HOMEPAGEMETADESCRIPTION") %>">
+		<meta name="keywords" content="<%= get_site_text("HOMEPAGEMETAKEYWORDS") %>"/>		
+		<title><%= get_site_text("OTHERPAGETITLE") %></title>
+		
+		<%= javascript_include_tag 'prototype' %>
+		
+		<link rel="stylesheet" href="/template/style.css" type="text/css">
+		<link rel="stylesheet" href="/stylesheets/constants.css" type="text/css">
+		<link type="text/css" rel="stylesheet" href="/floatbox/floatbox.css" />
+		<link rel="stylesheet" href="/roundcorners/dialog.css" media="screen" />
+		<link rel="stylesheet" href="/roundcorners/example-variants.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/liquidcorners/liquidcorner.css">
+
+		<script type="text/javascript" src="/floatbox/floatbox.js"></script>
+		<script type="text/javascript" src="/javascripts/realestate.js"></script>
+		
+</head>
+<body>
+<div id="centering-nonhome-div">
+					<div id="masthead">		
+						<div id="mastheadlogo">			
+							<img src="/images/shawnsolo.jpg" height="100" align="left">
+							<div id="mastheadmenu">
+								<% if logged_in? %>
+									Welcome <%= current_user.firstname %>&nbsp;&nbsp;&nbsp;&nbsp;
+								<% end %>
+								<a href="/">Home</a> | <a href="/contactus">Contact Us</a> | <a href="/aboutus">About Us</a>
+								| <%= link_to "Search All Properties", :controller => 'listings', :action => 'listbook' %>
+								| <a href="/mlssearch">MLS Search</a>
+								| <a href="/reo">REO</a>
+								| <a href="/shortsales">Short Sales</a>
+								
+								<% if !logged_in? %>
+								 | <a href="/signup">Register</a>
+								 | <a href="/login">Login</a>
+								<% else %>
+								 | <a href="/logout">Logout</a>
+								<% end %>
+							</div>
+							<br><br>
+							<div id="otherpagelogo"><img src="/images/basslogo.jpg" width="475"></div>
+						</div>
+					</div>
+					<div id="headersubmenu">
+								<div id="submenutext">
+									<%= render(:partial => "shared/usermenu", :locals => {:pagename => 'OTHER'}) %>
+									 | 
+									<%= render(:partial => "shared/othermenu", :locals => {:pagename => "OTHER"}) %>
+								</div>
+								<div id="headersubmenusearch">
+									<%
+										searchcriteria = session[:searchcriteria]
+										if searchcriteria == nil
+											searchcriteria = Searchcriteria.new(" ", " ")
+											session[:searchcriteria] = searchcriteria
+										end
+									%>
+						 			<% 
+										srchcrt = session[:searchcriteria]
+										srchtoken = srchcrt.srchtoken
+										if srchtoken.blank?
+											srchtoken = "Keyword Search"
+										end
+									%>
+
+								</div> <!-- End of search -->
+						</div>
+				
+				<%= @content_for_layout %>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9453236-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+</body>
+</html>

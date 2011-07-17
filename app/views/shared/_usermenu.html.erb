@@ -1,0 +1,24 @@
+<% if pagename && pagename != "HOME" %>
+	<a href="/">Home</a> 
+<% end %>
+<% if logged_in? %>
+	<% if pagename && pagename != "HOME" %>
+		|  
+	<% end %>
+	<a href="/myprofile?id=<%= current_user.id %>">Profile</a> | 
+	<a href="/showmyfavorites">Favorites</a> | 
+	<a href="/myreceivedmessages">Messages</a>
+
+	<% if pagename && pagename == "HOME" && !current_user.is_admin %>
+		|  
+	<% end %>
+
+
+	<% if current_user.is_admin %>
+		| <a href="/administration">Admin</a>
+		<% if pagename && pagename == "HOME"  %>
+			|  
+		<% end %>
+		
+	<% end %>
+<% end %>

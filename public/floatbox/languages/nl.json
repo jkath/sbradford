@@ -1,0 +1,13 @@
+// Dutch
+{
+"hintClose":   "Sluiten (klav: Esc)",
+"hintPrev":    "Vorige (klav: ←)",
+"hintNext":    "Volgende (klav: →)",
+"hintPlay":    "Afspelen (klav: spatie-balk)",
+"hintPause":   "Pauze (klav: spatie-balk)",
+"hintResize":  "Grootte aanpassen (klav: Tab)",
+"imgCount":    "Afbeelding %1 van %2",
+"nonImgCount": "Pagina %1 van %2",
+"mixedCount":  "(%1 van %2)",
+"infoText":    "Info..."
+}

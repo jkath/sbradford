@@ -1,0 +1,63 @@
+<head>
+	<link rel="stylesheet" href="/template/style.css" type="text/css">
+	<link rel="stylesheet" href="/stylesheets/constants.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="/liquidcorners/liquidcorner.css">
+</head>
+<div id="centering-popup-div">
+<h2>Send An Automatic Message</h2>
+<% 
+	#This might be a reply message
+	recipientid = 1
+	parentmessageid = -1
+	messageid = params[:messageid]
+	if  messageid != nil 
+		tmpMessage = Message.find(params[:messageid])
+		recipientid = tmpMessage.user_id
+		parentmessageid = tmpMessage.id
+	end
+
+	listingid = params[:listingid]
+	property_msg = ""
+	if  listingid != nil 
+		tmpListing = Listing.find(params[:listingid])
+		property_msg = "I'm interested in Property ID " + listingid + " - " + tmpListing.title + "\n"
+	else
+		listingid = -1
+	end
+%>
+
+<div id="pagecontent">
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+		<p class="notopgap">&nbsp;</p>
+			<!-- Start Of Content -->
+
+		<%= error_messages_for :listing %>
+
+				<% form_for(@message) do |f| %>
+
+				  <%= f.hidden_field :user_id, :value => current_user.id %>
+				  <%= f.hidden_field :recipient_id, :value => recipientid %>
+				  <%= f.hidden_field :hasbeenread %>
+				  <%= f.hidden_field :parent_message, :value => parentmessageid %>
+
+				  <p>
+				    <%= f.label :subject %><br />
+				    <%= f.text_field :subject, :size => 69 %>
+				  </p>
+				  <p>
+				    <%= f.label :message %><br />
+				    <%= f.text_area :message, :cols => "60", :rows => "10", :value => property_msg  %>
+				  </p>
+
+				  <p>
+				    <%= f.submit 'Send Message' %>
+				  </p>
+				<% end %>
+						<!-- End Of Content -->
+						
+		<p class="nobottomgap"></p>
+	</div>
+<div class="bottom-left"></div><div class="bottom-right"></div>
+</div> <!-- End Page Content -->
+</div>

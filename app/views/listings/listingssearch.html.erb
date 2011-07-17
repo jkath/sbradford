@@ -1,0 +1,83 @@
+<div id="pagecontent">
+
+<h2><%= flash[:notice] %></h2>
+<% if @listings.size > 6 %>
+<div id="pagination">
+	<div id="nav">
+	<%= will_paginate @listings %>
+	</div>
+</div>
+<% end %>
+
+
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+			<div id="listingresults">
+				<%= render(:partial => "shared/searchform") %>
+			</div>
+		<!-- End Of Content -->
+	    <p class="notopgap">
+		</p>
+		<p class="nobottomgap">
+		</p>
+	</div>
+<div class="bottom-left"></div><div class="bottom-right"></div>
+<div id="listingrowspacer"></div>
+
+<h1>Search Results</h1>
+<% if @listings.size == 0%>
+<center><h1>No Featured Properties Matched Your Search</h1></center>
+<% end %>
+
+<% @listings.each do |listing| %>
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+			<div id="listingresults">
+				
+				<div id="leftdiv">
+							<% if listing.listingphoto.first %>
+								<%= image_tag listing.listingphoto.first.photo.url(:thumb), :width => "100" %>
+							<% else %>
+								<%= image_tag "/images/nopropertyphotoavailable.png", :height => "90" %><br>
+								No Photos
+							<% end %>
+					</div>
+					
+					<div id="centerdiv">
+						   <br>
+						   <span class="listingtitle"><%=h truncate_words(listing.title, 8) %></span><br>
+						   <%=h truncate_words(listing.location, 8) %><br>
+						   <b>Property ID:</b> <%= listing.id %><br>
+						   <%=h truncate_words(listing.description, 20) %><br>
+						   <b>Beds:</b> <%=h listing.beds %> <b>Baths:</b> <%=h listing.baths %>
+						   <b>Price:</b> <%=h number_to_currency(listing.price, :precision => 0) %> <b>Taxes:</b> <%=h listing.taxes %> <b>Tax Year:</b> <%=h listing.taxyear %><br>
+						   <b>Additional Info:</b> <%=h truncate_words(listing.otherinfo, 20) %>
+					</div>
+					
+					<div id="rightdiv">
+						   <%= link_to 'View', listing %>
+						<a href="/messages/new?listingid=<%= listing.id %>">More&nbsp;Info</a>
+						   <a href="/savetofavorites?src=list&listingid=<%= listing.id %>">Save</a>
+						   <a href="/sharelisting?listingid=<%= listing.id %>">Share</a>
+					</div>
+					
+			</div>			
+		    <p class="notopgap">
+			</p>
+			<!-- End Of Content -->
+			<p class="nobottomgap">
+			</p>
+		</div>
+	<div class="bottom-left"></div><div class="bottom-right"></div>
+	<div id="listingrowspacer"></div>
+
+<% end %>
+
+<% if @listings.size > 6 %>
+<div id="pagination">
+	<div id="nav">
+	<%= will_paginate @listings %>
+	</div>
+</div>
+<% end %>
+</div>

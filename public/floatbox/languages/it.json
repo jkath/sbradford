@@ -1,0 +1,13 @@
+// Italian
+{
+"hintClose":   "Chiudere (tasto: Esc)",
+"hintPrev":    "Precedente (tasto: ←)",
+"hintNext":    "Seguente (tasto: →)",
+"hintPlay":    "Afspelen (tasto: barra spaziatrice)",
+"hintPause":   "Pausa (tasto: barra spaziatrice)",
+"hintResize":  "Risiedere (tasto: Tab)",
+"imgCount":    "Immagine %1 de %2",
+"nonImgCount": "Pagina %1 de %2",
+"mixedCount":  "(%1 de %2)",
+"infoText":    "Info..."
+}

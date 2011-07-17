@@ -1,0 +1,318 @@
+h1{
+	margin-left: 5px;
+	font-family: Tahoma, Arial;
+	font-size: 24px;
+	font-weight: bold;
+	color: #990000;
+}
+.tdheader{
+	background-color: white;
+	color: #990000;
+}
+#profiletext{
+}
+#profiletext td {
+	font-family: Tahoma, Arial;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+}
+.listingtitle{
+	font-family: Tahoma, Arial;
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+}
+.listingtitle td{
+	font-family: Tahoma, Arial;
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+}
+
+#centering-nonhome-div {
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url(/images/bgtile.jpg);
+	width: 850px;
+	border: lightgray solid 1px;
+	min-height: 700px;
+}
+#centering-popup-div {
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url(/images/bgtile.jpg);
+	width: 600px;
+	border: lightgray solid 1px;
+}
+#pagecontent {
+	margin-left: 5px;
+	margin-right: 5px;	
+}
+#pagecontent a{
+	text-decoration: none;
+	color: yellow;
+}
+#pagecontent a:hover{
+	text-decoration: none;
+	color: lightblue;
+}
+#masthead {
+	height: 103px;
+}
+#masthead #mastheadlogo{
+	margin-top: 0;
+	margin-left: 0;
+	width: 800px;
+}
+#masthead #mastheadmenu {
+	text-align: right;
+	margin-top: 3px;
+	
+	font-family: Tahoma, Arial;
+	color: gray;
+	font-size: 12px;
+	font-weight: normal;
+}
+#mastheadmenu a:link, a:active, a:visited {
+	font-family: Tahoma, Arial;
+	color: gray;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: normal;
+}
+#mastheadmenu a:hover {
+	font-family: Tahoma, Arial;
+	color: red;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+#headersubmenu{
+	background-color: #990000;
+	height:30px;
+	border: gray solid 2px;
+		color: white;
+}
+
+#headersubmenu #submenutext {
+	margin-top: 4px;
+	margin-left: 5px;
+	float: left;
+}
+#headersubmenu #submenutext a {
+	color: white;
+}
+#headersubmenu #submenutext a:visited {
+	color: white;
+}
+#headersubmenu #submenutext a:hover, a:link {
+	color: gray;
+}
+
+#headersubmenusearch{
+	color: white;
+	margin-right: 10px;
+	float: right;
+}
+.menutd {
+	height: 12px;
+	color: white;
+	background-color: #990000;
+	font-fami1y: Tahoma, Arial;
+	color: white;
+	font-size: 12px;
+}
+
+#homepagemenu a {
+	color: white;
+}
+#homepagemenu a:visited {
+	color: white;
+}
+#homepagemenu a:hover, a:link {
+	color: gray;
+}
+
+#listingresults{
+	width: 770px;
+	height: 90px;
+	background-color: #990000;
+}
+#listingrowspacer {
+	height: 5px;
+}
+#listingresults #leftdiv{
+	float: left;
+	width: 105px;
+}
+#listingresults #centerdiv{
+	margin-top: -18px;
+	margin-left: 10px;
+	float: left;
+	width: 620px;
+	font-fami1y: Tahoma, Arial;
+	color: white;
+	font-size: 12px;
+	font-weight: normal;
+}
+#listingresults #rightdiv{
+	margin-left: 20px;
+	float: left;
+	text-align: left;
+	width: 10px;
+}
+#listingresults #rightdiv a {
+	color: white;
+	text-decoration: none;
+}
+#listingresults #rightdiv a:visited {
+	color: white;
+	text-decoration: none;
+}
+#listingresults #rightdiv a:hover {
+	color: lightgray;
+	text-decoration: none;
+}
+#pagination {
+	width: 770px;
+	margin-left: auto ;
+ 	margin-right: auto ;
+	height: 12px;
+	/* background: url(/images/masthead.png) no-repeat left bottom;	*/
+	background-color:  white; /* #FFA54F; */
+	border: red solid 2px;
+	
+}
+#pagination #nav {
+	margin: -3px 20px 0px 0px; /* auto 9px; */
+	color: brown;
+}
+#viewlistinglefttopdiv{
+	float: left;
+	width: 300px;
+}
+#viewlistingrighttopdiv{
+	margin-top: 0px;
+	margin-left: 10px;
+	float: left;
+	width: 500px;
+	font-family: Tahoma, Arial;
+	font-size: 16px;
+	color: white;
+	text-align: justify;
+}
+#viewlistingleftbottomdiv{
+	margin-top: 20px;
+	padding-left: 10px;
+	width: 800px;	
+	font-family: Tahoma, Arial;
+	font-size: 14px;
+	color: white;
+	text-align: justify;
+}
+#viewlistingphotosdiv{
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 800px;	
+}
+td a {
+	color: white;
+	text-decoration: none;
+}
+td a:visited {
+	color: white;
+	text-decoration: none;
+}
+td a:hover {
+	color: lightgray;
+	text-decoration: none;
+}
+
+#aboutus {
+	
+}
+#aboutus #leftdiv{
+	width: 200px;
+}
+#aboutus #rightdiv{
+	margin-left: 10px;
+	width: 550px;
+	font-fami1y: Tahoma, Arial;
+	color: white;
+	font-size: 12px;
+	font-weight: normal;
+}
+#contactusaddress{
+	margin-top: 0px;
+	font-family: Tahoma, Arial;
+	font-size: 15px;
+	color: white;
+}
+#contactusaddress h1 {
+	font-family: Tahoma, Arial;
+	font-size: 21px;
+	color: white;
+
+}
+#newspagenewstitle{
+	font-family: Tahoma, Arial;
+	font-size: 22px;
+	color: white;	
+	text-decoration: underline;
+}
+.row1bg{
+	background-color: #FF3D0D;
+	width: 310px;
+}
+.row1bg a {
+	color: white;
+	text-decoration: none;
+}
+.row1bg a:visited {
+	color: white;
+	text-decoration: none;
+}
+.row1bg a:hover {
+	color: gray;
+	text-decoration: none;
+}
+.row2bg{
+	background-color: #C73F17;
+	width: 310px;
+}
+.row2bg a {
+	color: white;
+	text-decoration: none;
+}
+.row2bg a:visited {
+	color: white;
+	text-decoration: none;
+}
+.row2bg a:hover {
+	color: gray;
+	text-decoration: none;
+}
+#otherpagelogo{
+	/* position: absolute; */
+	margin-top: -23px;
+	margin-left: 225px;
+}
+#otherpagefooter{
+	position: absolute;
+	bottom: 0;
+	width: 848px;
+	background-image: url(/images/bgtile.jpg);
+	border: white solid 1px;
+}
+.listtablestd{
+	font-family: Tahoma, Arial;
+	font-size: 16px;
+	color: white;	
+}
+.propertydescription{
+	font-family: Tahoma, Arial;
+	font-size: 14px;
+	color: white;	
+}

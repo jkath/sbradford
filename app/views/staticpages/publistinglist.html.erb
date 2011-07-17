@@ -1,0 +1,11 @@
+
+<% @listings.each do |listing| %>
+				   <%=h listing.title %><br>
+				   <b>Property ID:</b> <%= listing.id %><br>
+				   <%=h listing.description %><br>
+				   <%=h listing.location %><br>
+				   <b>Beds:</b> <%=h listing.beds %> <b>Baths:</b> <%=h listing.baths %><br>
+				   <b>Price:</b> <%=h number_to_currency(listing.price, :precision => 0) %> <b>Taxes:</b> <%=h listing.taxes %> <b>Tax Year:</b> <%=h listing.taxyear %><br>
+				   <%=h listing.otherinfo %><br>
+				   <%= link_to 'View', listing %><br>
+<% end %>

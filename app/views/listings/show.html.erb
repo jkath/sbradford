@@ -1,0 +1,53 @@
+<br>
+
+<div id="pagecontent">
+	<div class="top-left"></div><div class="top-right"></div>
+		<div class="inside">
+		<!-- Start Of Content -->
+	
+	
+			<span class="listingtitle"><%=h @listing.title %> (<%=h number_to_currency(@listing.price, :precision => 0) %>)</span>
+			<br>
+			<a class="reglink" href="/savetofavorites?src=show&listingid=<%= @listing.id %>">Save To Favorites!</a><br>
+			<table width="100%">
+				<td valign="top" width="300">
+					<% if @listing.listingphoto.first %>
+						<%= image_tag @listing.listingphoto.first.photo.url(:medium) %>
+					<% else %>
+							<%= image_tag "/images/nopropertyphotoavailable.png", :width => "200" %>
+					<% end %>
+					<br>
+					<b>Property ID:</b> <%= @listing.id %><br>
+					<b>Location:</b> <%=h @listing.location %><br>
+					<b>Beds:</b> <%=h @listing.beds %> Baths:</b> <%=h @listing.baths %>
+					<b>Taxes:</b> <%=h @listing.taxes %>
+					<b>Taxyear:</b> <%=h @listing.taxyear %>
+					<br><br>
+					
+					<% if !@listing.listingphoto.first %>
+						<%= image_tag "/images/nopropertyphotoavailable.png", :height => "90" %><br>
+						No Photos
+					<% end %>
+
+					<% @listing.listingphoto.each do |photo| %>
+						<a href="/listingphotos/show/<%= photo.id %>" rel="floatbox" title="<%= photo.description %>" rev="width: 400px; height: 400px; scrolling: no;"><%= image_tag photo.photo.url(:thumb), :height => "90" %></a>
+						&nbsp;
+					<% end %>
+
+				</td>
+				<td width="100%" valign="top" class="propertydescription">
+					<%=h @listing.description %>
+					<br><br>
+					<%=h @listing.otherinfo %>
+				</td>
+				</tr>
+			</table>
+
+
+			<br>
+			<!-- End Of Content -->
+			<p class="notopgap"></p>
+			<p class="nobottomgap"></p>
+		</div>
+	<div class="bottom-left"></div><div class="bottom-right"></div>
+</div> <!-- End Page Content -->

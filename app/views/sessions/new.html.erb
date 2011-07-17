@@ -1,0 +1,30 @@
+<h1>Log In</h1>
+
+<%= error_messages_for :listing %>
+<div id="pagecontent">
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+		<p class="notopgap">&nbsp;</p>
+			<!-- Start Of Content -->
+	<%= flash_messages %>
+  	<!-- Your content goes here -->
+		<% form_tag session_path do -%>
+		<p><%= label_tag 'login' %><br />
+		<%= text_field_tag 'login', @login %></p>
+
+		<p><%= label_tag 'password' %><br/>
+		<%= password_field_tag 'password', nil %></p>
+
+		<!-- Uncomment this if you want this functionality
+		<p><%= label_tag 'remember_me', 'Remember me' %>
+		<%= check_box_tag 'remember_me', '1', @remember_me %></p>
+		-->
+
+		<p><%= submit_tag 'Log in' %></p>
+		<% end -%>
+		<br>
+		<a href="/signup">If You Haven't Already Registered, Click Here</a>
+		<p class="nobottomgap"> </p>
+	</div>
+<div class="bottom-left"></div><div class="bottom-right"></div>
+</div> <!-- End Page Content -->

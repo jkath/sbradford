@@ -1,0 +1,12 @@
+
+Finnish (fi)
+Norwegian (no)
+Korean (ko)
+Polish (pl)
+Hebrew (he)
+Turkish (tr)
+Czech (cs)
+Arabic (ar)
+Icelandic (is)
+
+Any and all other language translations are welcome!

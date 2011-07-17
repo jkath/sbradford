@@ -1,0 +1,43 @@
+<div id="pagecontent">
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+		<p class="notopgap">&nbsp;</p>
+		<!-- Start Of Content -->
+
+	    <% form_for @sitelink, :html => { :multipart => true } do |f| %>
+		  <%= f.error_messages %>
+
+		  <p>
+		    Name For The Link<br />
+		    <%= f.text_field :title %>
+		  </p>
+		  <p>
+		    URL of the link (Ex: http://www.mysite.com)<br />
+		    <%= f.text_field :url %>
+		  </p>
+		  <p>
+		    Show This As A Popup Window <%= f.check_box :is_popup %>
+		  </p>
+		  <p>On Which Page Should This Link Appear?<br/>
+		<%= collection_select(:sitelink, :preferredpage,  @preferredpages,  :pagevalue, :pagedescription) %>		
+		  </p>
+		  <% if @sitelink.photo_file_name != nil && @sitelink.photo_file_name != "" %>
+			<%= image_tag @sitelink.photo.url(:thumb) %>
+		  <% end %>	
+		  <p>
+		    <%= f.label :photo %><br />
+		    <%= f.file_field :photo %>
+		  </p>
+		  <p>
+		    <%= f.submit 'Save' %>
+		  </p>
+		<% end %>
+		
+	<br>
+	<%= link_to 'Back To Site Links List', sitelinks_path %>
+	<!-- End Of Content -->
+	<br>
+	<p class="nobottomgap"></p>
+</div>
+<div class="bottom-left"></div><div class="bottom-right"></div>
+</div> <!-- End Page Content -->

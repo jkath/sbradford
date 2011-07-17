@@ -1,0 +1,2 @@
+class ReoController < ApplicationController
+end

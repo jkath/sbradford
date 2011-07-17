@@ -1,0 +1,13 @@
+// Hungarian
+{
+"hintClose":   "Bezár (Esc)",
+"hintPrev":    "Előző (←)",
+"hintNext":    "Következő (→)",
+"hintPlay":    "Lejátszás (space)",
+"hintPause":   "Megállít (space)",
+"hintResize":  "Átméretez (Tab)",
+"imgCount":    "%2 képből a(z) %1.",
+"nonImgCount": "%2 oldalból a(z) %1.",
+"mixedCount":  "(%1 / %2)",
+"infoText":    "Info..."
+}

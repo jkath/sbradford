@@ -1,0 +1,251 @@
+#centering-div {
+	margin-left: auto;
+	margin-right: auto;
+	width: 835px;
+	border: gray solid 2px;
+	min-height: 870px;
+	background-image: url(/images/bgtile.jpg);
+}
+
+#centering-div #homepageleftside{
+	float: left;
+	width: 310px;
+	min-height:400px;
+/*	background-image: url(/images/bgtile.jpg); */
+	background-image: url(/template/images/AboriginalCanvas.jpg);
+}
+#homepageleftside #homepageleftboxmenu{
+	background-color: #990000;
+	width: 310px;
+	text-align: left;
+	color: white;
+}
+#centering-div #homepageleftside #homepageleftbox1{
+	height:220px;
+	width: 262px;
+}
+#centering-div #homepageleftside #homepageleftbox2{
+}
+#homepageleftside #homepageleftbox3{
+	text-align: left;
+	height:300px;
+
+}
+#homepageleftside #homepageleftbox3 a {
+	font-fami1y: Tahoma, Arial;
+	color: white;
+	font-size: 14px;	
+}
+
+#centering-div #homepagecenter{
+	float: left;
+	height:760px;
+	width: 1px;
+	background-color: #ffffff;
+}
+#homepagerightside{
+	text-align: left;
+	float: left;
+	width: 516px;
+	min-height:400px;
+	background-image: url(/images/bgtile.jpg);
+}
+#homepagerightside #homepagelogo{
+	position: absolute;
+	margin-top: 0px;
+	margin-left: 360px;
+	border: #990000 solid 2px;
+}
+#homepagerightside #homepagebuttons{
+	position: absolute;
+	margin-top: 210px;
+	margin-left: 100px;
+}
+#homepagerightside #homepagerightbox1{	
+}
+#homepagerightside #homepagerightbox2{	
+	height: 22px;
+	color: white;
+	background-color: #990000;
+	font-fami1y: Tahoma, Arial;
+	color: white;
+	font-size: 18px;
+}
+#homepagerightside #homepagerightbox3{	
+	/* width: 514px; */
+	/* height: 220px; */
+	/* background-image: url(/template/images/bursak.gif); */
+	/* padding-left: 5px;	*/
+	color: gray;
+}
+#homepagerightside #homepagerightbox4{	
+	height: 300px;
+	color: gray;
+}
+#homepagerightside #homepagerightbox4 td {	
+	color: gray;
+	text-decoration: bold;
+}
+#homepageleftsectionbar{
+	text-align: left;
+	width: 310px;
+	background-color: #990000;
+	height: 20px;
+	font-fami1y: Tahoma, Arial;
+	color: white;
+	font-size: 17px;
+	font-weight: bold;
+}
+#homepagerightsectionbar{
+	text-align: left;
+	width: 520px;
+	background-color: #990000;
+	height: 20px;
+	font-fami1y: Tahoma, Arial;
+	color: white;
+	font-size: 17px;
+	font-weight: bold;
+}
+#homepagerightside #homepagerightbox5{
+}
+#homepagefooter{
+	float: left;
+	width: 830px;
+	background-image: url(/images/bgtile.jpg);
+	border: white solid 1px;
+}
+#welcometitle{
+	font-family: Tahoma, Arial;
+	font-size: 14px;
+	font-weight: bold;
+	color: #990000;
+	
+}
+#welcometext{
+	text-align: justify;
+	font-family: Tahoma, Arial;
+	font-size: 12px;
+	color: #990000;
+}
+#homepagewelcomeuser{
+	text-align: center;
+	font-family: Tahoma, Arial;
+	font-size: 32px;
+	color: #990000;
+}
+#homepagelogin{
+	color: #990000;
+	margin-left: 30px;
+}
+#homepagelogin a {
+	color: #990000;
+}
+.whitemediumtext{
+	color: white;
+	font-fami1y: Tahoma, Arial;
+	color: white;
+	font-size: 14px;
+}
+#memberloginarea{
+	color: gray;
+	font-fami1y: Tahoma, Arial;
+	color: white;
+	font-size: 14px	
+}
+#row1bg{
+	background-color: #FF3D0D;
+	width: 310px;
+}
+#row2bg{
+	background-color: #C73F17;
+	width: 310px;
+}
+.menutd {
+	height: 12px;
+	color: white;
+	background-color: #990000;
+	font-fami1y: Tahoma, Arial;
+	color: white;
+	font-size: 12px;
+}
+a:link, a:active, a:visited {
+	font-family: Tahoma, Arial;
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+}
+a:hover {
+	font-family: Tahoma, Arial;
+	color: white;
+	text-decoration: none;
+	font-size: 11px;
+	font-weight: normal;
+}
+.black {
+	color: #000000;
+}
+
+a.link:link, a.link:active, a.link:visited {
+	font-family: Tahoma, Arial;
+	color: white;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+}
+a.link:hover {
+	font-family: Tahoma, Arial;
+	color: #617B80;
+	text-decoration: underline;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+body {
+	background-image: url(background.gif);
+	margin-left: auto;
+	margin-right: auto;
+}
+td {
+	font-family: Tahoma, Arial;
+	font-size: 11px;
+	color: white;
+}
+.px10 {
+	font-size: 10px;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+.white {
+	color: #FFFFFF;
+}
+.blue {
+	color: #4C6378;
+}
+.red {
+	color: #C5150C;
+}
+.px11 {
+	font-size: 11px;
+}
+.px12 {
+	font-size: 12px;
+}
+.grey {
+	color: #C0C0C0;
+}
+.green {
+	color: #487A79;
+}
+.orange {
+	color: #F76400;
+}
+.yellow {
+	color: #FFB200;
+}

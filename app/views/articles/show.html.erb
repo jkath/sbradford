@@ -1,0 +1,32 @@
+<br>
+<div id="pagecontent">
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+		<p class="notopgap">&nbsp;</p>
+		<!-- Start Of Content -->
+  	<!-- Your content goes here -->
+	<br>
+  	<!-- Your content goes here -->
+		<p>
+		  <div id="newspagenewstitle">
+		  	<%=h @article.title %>
+		  </div>
+		</p>
+
+		<p>
+		  <%= @article.description %>
+		</p>
+		<br />
+		<br />
+		<% if current_user && current_user.is_admin%>
+			<%= link_to 'Edit', edit_article_path(@article) %> |
+			<%= link_to 'Back To Articles List', articles_path %>
+		<% end %>
+
+		<br />
+	<!-- End Of Content -->
+	<br>
+	<p class="nobottomgap"></p>
+</div>
+<div class="bottom-left"></div><div class="bottom-right"></div>
+</div> <!-- End Page Content -->

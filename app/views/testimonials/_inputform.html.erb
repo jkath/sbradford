@@ -1,0 +1,44 @@
+<head>
+	<script type="text/javascript" src="/fckeditor/fckeditor.js"></script>
+<script>
+window.onload = function()
+{
+    var oFCKeditor = new FCKeditor( 'testimonial_testimonial' ) ;
+    oFCKeditor.BasePath = '/fckeditor/';
+    oFCKeditor.ReplaceTextarea() ;
+}
+</script>
+</head>
+
+<div id="pagecontent">
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+		<p class="notopgap">&nbsp;</p>
+		<!-- Start Of Content -->
+		<% form_for(@testimonial) do |f| %>
+		  <%= f.error_messages %>
+
+		  <p>
+		    <%= f.label :title %><br />
+		    <%= f.text_field :title, :size => '69'  %>
+		  </p>
+		  <p>
+		    Name Of Person Who Gave The Testimonial<br />
+		    <%= f.text_field :fullname %>
+		  </p>
+		  <p>
+		    <%= f.label :testimonial %><br />
+		    <%= f.text_area :testimonial, :cols => "60", :rows => "10"   %>
+		  </p>
+		  <p>
+		    <%= f.submit 'Save' %>
+		  </p>
+		<% end %>
+		<br />
+		<%= link_to 'Back To Testimonials List', testimonials_path %>
+	<!-- End Of Content -->
+	<br>
+	<p class="nobottomgap"></p>
+</div>
+<div class="bottom-left"></div><div class="bottom-right"></div>
+</div> <!-- End Page Content -->

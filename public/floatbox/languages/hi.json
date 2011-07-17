@@ -1,0 +1,13 @@
+// Hindi
+{
+"hintClose":   "बंद (key: Esc)",
+"hintPrev":    "पिछेला (key: ←)",
+"hintNext":    "अगला (key: →)",
+"hintPlay":    "शुरु (key: spacebar)",
+"hintPause":   "रोकना (key: spacebar)",
+"hintResize":  "आकार बदलना (key: Tab)",
+"imgCount":    "चित्र %1 से %2",
+"nonImgCount": "पृष्ठ %1 से %2",
+"mixedCount":  "(%1 से %2)",
+"infoText":    "जानकारी..."
+}

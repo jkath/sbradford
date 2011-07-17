@@ -1,0 +1,36 @@
+
+<div id="pagecontent">
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+		<p class="notopgap">&nbsp;</p>
+		<!-- Start Of Content -->
+
+		<% form_for(@sitetext) do |f| %>
+		  <%= f.error_messages %>
+
+		  <p>
+		    How Do You Want To Identify This Piece Of Text? (Alphabetic characters only! No Spaces)<br />
+		    <%= f.text_field :textkey %> (Example:   HOMEPAGEWELCOMETEXT)
+		  </p>
+		  <p>
+		    Enter The Text Here<br />
+		    <%= f.text_area :sitetext, :cols => "60", :rows => "10" %>
+		  </p>
+		  <p>
+		    Make This Active <%= f.check_box :is_active %>
+		  </p>
+		  <p>
+		    <%= f.submit 'Save' %>
+		  </p>
+		<% end %>
+		<br />
+
+		<%= link_to 'Back To Listing Of Site Text', sitetexts_path %>
+		<br>
+		<!-- End Of Content -->
+		<br>
+		<p class="nobottomgap"></p>
+	</div>
+<div class="bottom-left"></div><div class="bottom-right"></div>
+</div> <!-- End Page Content -->
+		

@@ -1,0 +1,43 @@
+<h1>Site Text</h1>
+
+<div id="pagecontent">
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+		<p class="notopgap">&nbsp;</p>
+		<!-- Start Of Content -->
+			<table width="100%">
+			  <tr>
+			    <th>Identifier</th>
+			    <th align="left">Text</th>
+			    <th>Active?</th>
+			  </tr>
+
+			<% x = 2 %>
+			<% @sitetexts.each do |sitetext| %>
+			  <% newsclass = "row1bg"
+			   newsclass = "row2bg" if x % 2 == 0
+			   x += 1
+			%>
+			
+			 <tr class="<%= newsclass %>">
+			    <td><%=h sitetext.textkey %></td>
+			    <td><%=h truncate_words(sitetext.sitetext, 10) %></td>
+			    <td><%=h sitetext.is_active %></td>
+			    <td><%= link_to 'View', sitetext %></td>
+			    <td><%= link_to 'Edit', edit_sitetext_path(sitetext) %></td>
+			    <td><%= link_to 'Delete', sitetext, :confirm => 'Are you sure?', :method => :delete %></td>
+			  </tr>
+			<% end %>
+			</table>
+
+			<br />
+
+			<%= link_to 'Add Some New Site Text', new_sitetext_path %>
+		<br>
+		<!-- End Of Content -->
+		<br>
+		<p class="nobottomgap"></p>
+	</div>
+<div class="bottom-left"></div><div class="bottom-right"></div>
+</div> <!-- End Page Content -->
+			

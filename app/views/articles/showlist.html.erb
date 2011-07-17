@@ -1,0 +1,40 @@
+<h1>Articles</h1>
+<br>
+<div id="pagecontent">
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+		<p class="notopgap">&nbsp;</p>
+		<!-- Start Of Content -->
+  	<!-- Your content goes here -->
+	<% if @articles.size == 0%>
+		No Articles Available Yet
+		<br>
+	<% else %>
+		<table width="100%">
+		  <tr>
+		    <th>Title</th>
+		    <th>Description</th>
+		  </tr>
+
+		<% x = 2 %>
+		<% @articles.each do |article| %>
+		<% newsclass = "row1bg"
+		   newsclass = "row2bg" if x % 2 == 0
+		   x += 1
+		%>
+		 <tr class="<%= newsclass %>">		
+		    <td class="listtablestd" ><%=h article.title %></td>
+		    <td class="listtablestd"><%= truncate_words(article.description, 12) %></td>
+		    <td><%= generate_articles_hreftag("/articles/show/" + article.id.to_s, article.title, article.as_popup) %>Read Article</a></td>
+		  </tr>
+		<% end %>
+		</table>
+		<% end %>
+
+	<!-- End Of Content -->
+	<br>
+	<p class="nobottomgap"></p>
+</div>
+<div class="bottom-left"></div><div class="bottom-right"></div>
+</div> <!-- End Page Content -->
+

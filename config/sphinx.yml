@@ -1,0 +1,13 @@
+DEFAULTS: &DEFAULTS
+  port: 13510
+  
+development:
+  <<: *DEFAULTS
+
+test:
+  <<: *DEFAULTS
+
+production:
+  <<: *DEFAULTS
+  bin_path: '/usr/local/bin'
+  

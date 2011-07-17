@@ -1,0 +1,56 @@
+<head>
+	<script type="text/javascript" src="/fckeditor/fckeditor.js"></script>
+<script>
+window.onload = function()
+{
+    var oFCKeditor = new FCKeditor( 'latestinfo_description' ) ;
+    oFCKeditor.BasePath = '/fckeditor/';
+    oFCKeditor.ReplaceTextarea() ;
+}
+</script>
+</head>
+<div id="pagecontent">
+<div class="top-left"></div><div class="top-right"></div>
+	<div class="inside">
+		<p class="notopgap">&nbsp;</p>
+		<!-- Start Of Content -->
+		<% form_for(@latestinfo) do |f| %>
+		 <%= f.error_messages %>
+
+		<%= f.hidden_field :sortorder, :value => 0 %>
+		
+		 <p>
+		   <%= f.label :title %> (Try to keep this short if you can.  About five words max.)<br />
+		   <%= f.text_field :title, :size => '69' %>
+		 </p>
+		 <p>
+		   <%= f.label :link %> (Only need to fill this in if this is an outside link.)<br />
+		   <%= f.text_field :link, :size => '69' %>
+		 </p>
+		 <p>
+		   <%= f.check_box :as_aspopup %> Show As A Popup (Select this box if the article is an outside link.) 
+		 </p>
+		 <p>
+		   <%= f.check_box :is_active %> Active (In order for this article to be seen, check this box.)
+		 </p>
+		 <p>
+		   If you are writing your own article, do it here.  If this is going to simply be a link
+		   pointing to an outside link, then don't put anything here.<br />
+		   <%= f.text_area :description %>
+		 </p>
+		 <p>
+		   <%= f.submit 'Save' %>
+		 </p>
+		<% end %>
+		<br>
+
+		<%= link_to 'Back To News List', latestinfos_path %>
+		<br />
+		<br />
+		
+	<!-- End Of Content -->
+	<br>
+	<p class="nobottomgap"></p>
+</div>
+<div class="bottom-left"></div><div class="bottom-right"></div>
+</div> <!-- End Page Content -->
